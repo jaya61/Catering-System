@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cart - Catering System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 🧭 Navbar -->
+  <header>
+    <h1>Catering System</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <a href="cart.html" class="active">My Cart</a>
+      <a href="profile.html">Profile</a>
+      <a href="place-order.html">Place Order</a>
+      <a href="upload-product.html">Upload Product</a>
+    </nav>
+  </header>
+
+  <!-- 🛒 Cart Section -->
+  <section class="cart">
+    <h2>My Cart</h2>
+    <p>Review your selected catering items before placing the order.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Traditional Indian Thali</td>
+          <td>₹499</td>
+          <td>1</td>
+          <td>₹499</td>
+        </tr>
+        <tr>
+          <td>South Indian Feast</td>
+          <td>₹399</td>
+          <td>2</td>
+          <td>₹798</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3"><strong>Total</strong></td>
+          <td><strong>₹1297</strong></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <button class="place-order">Place Order</button>
+  </section>
+
+  <!-- 🦶 Footer -->
+  <footer>
+    <p>© 2025 Catering System - Bringing Indian Taste to the World</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
