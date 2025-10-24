@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Details - Catering System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Your Order Details</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a>
+      <a href="profile.html">Profile</a>
+      <a href="place-order.html">Place Order</a>
+      <a href="upload-product.html">Upload Product</a>
+    </nav>
+  </header>
+
+  <section class="cart">
+    <h2>Order Summary</h2>
+    <p>Here are the items you selected:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- JS will populate cart items here -->
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4"><strong>Total</strong></td>
+          <!-- <td><strong></strong></td> -->
+        </tr>
+      </tfoot>
+    </table>
+
+    <p><em>You cannot modify the order on this page.</em></p>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
