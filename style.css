@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ===== Global Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #FCEF91;
+    color: #000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Header / Navbar ===== */
+header {
+    background-color: #FB9E3A;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #f92100;
+}
+
+/* ===== Main Section ===== */
+section {
+    flex: 1;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #d35400;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* ===== Buttons ===== */
+button {
+    background-color: #d35400;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #F97A00;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #FB9E3A;
+    color: #fff;
+    text-align: center;
+    padding: 12px 0;
+    margin-top: auto;
+    width: 100%;
+    font-weight: bold;
+}
+
+/* ===== Forms ===== */
+form {
+    background-color: #fff;
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+form h2 {
+    color: #d35400;
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: border 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border: 2px solid #F97A00;
+}
+
+form button {
+    width: 100%;
+    font-size: 18px;
+    margin-top: 15px;
+    border-radius: 12px;
+}
+
+form p{
+    margin-top: 15px;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+form p a {
+    text-decoration: none;
+    color: #d35400;
+    font-size: 16px;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    background: url("assests/images/hero-bg.jpeg") no-repeat center center/cover;
+    color: #f8f8f8;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    margin-bottom: 15px;
+    color: #ff9933;
+    font-size: 2.2rem;
+    font-style: italic;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.6;       
+}
+
+.hero button {
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 12px;
+    color: #fff;
+}
+
+/* ===== Features Section ===== */
+.features {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.feature-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.feature-box div {
+    background-color: #FCEF91;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-box div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.feature-box img {
+    width: 100%;
+    border-radius: 10px;
+    height: 160px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.feature-box h3 {
+    color: #d35400;
+    margin: 10px 0 8px;
+}
+
+.feature-box p {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ===== Products Page ===== */
+.products {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.products p {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.product-card {
+    background-color: #FCEF91;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 160px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    color: #d35400;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.price {
+    font-weight: bold;
+    color: #27ae60;
+    margin: 8px 0;
+}
+
+.product-card button {
+    width: 100%;
+}
+
+/* ===== Cart Page ===== */
+.cart {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cart table {
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+.cart th, .cart td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.cart th {
+    background-color: #ff9933;
+    color: white;
+}
+
+.cart tfoot td {
+    font-weight: bold;
+    color: #d35400;
+}
+
+.place-order {
+    background-color: #27ae60;
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.place-order:hover {
+    background-color: #1e8449;
+}
+
+/* ===== Profile Page ===== */
+.profile-card {
+    background-color: #fff;
+    max-width: 350px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.profile-card h3 {
+    color: #d35400;
+    margin-bottom: 10px;
+}
+
+.profile-card p {
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.profile-card button {
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* ===== Upload Product ===== */
+#productName, #productPrice, #productImage, #productDescription {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#productName:hover, #productPrice:hover, #productImage:hover, #productDescription:hover {
+    border: 2px solid #ff9933;
+}
+
+/* Order summary spacing */
+.order-info {
+    margin-top: 20px;
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.order-info p {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.order-info p strong {
+    font-weight: bold;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+    .feature-box {
+        gap: 20px;
+    }
+    .product-container {
+        gap: 20px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.4rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 8px 15px;
+    }
+
+    .place-order {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
