@@ -100,11 +100,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     ];
 
-    allProducts.forEach(p => {
+    // ✅ Only show products with valid images (no default.jpg, no empty)
+    const validProducts = allProducts.filter(
+      p => p.image && !p.image.includes('default.jpg')
+    );
+
+    validProducts.forEach(p => {
       const card = document.createElement('div');
       card.classList.add('product-card');
       card.innerHTML = `
-        <img src="${p.image || 'default.jpg'}" alt="${p.name}">
+        <img src="${p.image}" alt="${p.name}">
         <h3>${p.name}</h3>
         <p class="price">₹${p.price}</p>
         <button>Add to Cart</button>
@@ -146,6 +151,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (imageInput && imageInput.files.length > 0) {
         const file = imageInput.files[0];
         imageURL = URL.createObjectURL(file);
+      }
+
+      // ✅ Block upload if no image
+      if (!imageURL) {
+        alert('Please select an image before uploading.');
+        return;
       }
 
       products.push({ name, price: Number(price), image: imageURL });
@@ -236,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-    // ----------------- SHOW ORDER SUMMARY (place-order.html) -----------------
+  // ----------------- SHOW ORDER SUMMARY (place-order.html) -----------------
   if (window.location.pathname.includes('place-order.html')) {
     const orderTableBody = document.querySelector('.cart tbody');
     const orderTableFoot = document.querySelector('.cart tfoot tr td strong');
@@ -248,7 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Get the most recent order
     const lastOrder = orders[orders.length - 1];
     orderTableBody.innerHTML = '';
     let total = 0;
@@ -269,20 +279,15 @@ document.addEventListener('DOMContentLoaded', () => {
       orderTableFoot.textContent = `₹${total}`;
     }
 
-    // Add optional info below the table
     const summaryInfo = document.createElement('div');
     summaryInfo.classList.add('order-info');
     summaryInfo.innerHTML = `
       <p><strong>Order ID:</strong> ${lastOrder.id}</p>
-
       <p><strong>Date:</strong> ${lastOrder.date}</p>
-
       <p><strong>Total Amount:</strong> ₹${lastOrder.total}</p>
-      
       <p><strong>Status:</strong> Confirmed ✅</p>
     `;
     document.querySelector('.cart').appendChild(summaryInfo);
   }
-
 
 });
